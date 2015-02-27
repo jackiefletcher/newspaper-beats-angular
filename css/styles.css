@@ -2,6 +2,10 @@
   font-family: 'Slabo 27px', serif;
 }
 
+.main-row {
+  font-size: 1.2em;
+}
+
 .info {
   font-size: .7em;
   font-style: italic;
