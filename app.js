@@ -6,4 +6,5 @@ newspaperBeats.config(function($stateProvider) {
     templateUrl: "partials/home.html",
     controller: 'BeatsCtrl'
   });
+  
 });

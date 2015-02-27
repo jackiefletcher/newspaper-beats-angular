@@ -1,4 +1,4 @@
-newpaperBeats.factory('BeatsFactory', function BeatsFactory() {
+newspaperBeats.factory('BeatsFactory', function BeatsFactory() {
   var factory = {};
   factory.beats = [];
   factory.addBeat = function() {
