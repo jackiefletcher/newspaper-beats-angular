@@ -2,13 +2,13 @@
   <h4>Add a new reporter to {{ beat.name }}:</h4>
   <form ng-submit="addReporter()" class="form-inline" role="form">
     <div class="form-group">
-      <input type="text" ng-model="reporterName" class="form-control" placeholder="Enter reporter name" autofocus>
+      <input type="text" ng-model="reporterName" class="form-control" placeholder="Enter reporter name" autofocus required>
     </div>
     <div class="form-group">
-      <input type="datetime" ng-model="birthdate" class="form-control" placeholder="Enter reporter birthdate">
+      <input type="date" ng-model="birthdate" class="form-control" placeholder="Enter reporter birthdate" required>
     </div>
     <div class="form-group">
-      <input type="text" ng-model="yearsEmployed" class="form-control" placeholder="Enter years employed" pattern="\d*">
+      <input type="text" ng-model="yearsEmployed" class="form-control" placeholder="Enter years employed" pattern="\d*" required>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

@@ -1,13 +1,29 @@
 <h2>Pendleton Paper -- Beats</h2>
 
 <div ng-show="beats.length">
-  <h4>Current Beats:</h4>
-    <ul>
-      <li ng-repeat="item in beats">
-        <a ui-sref="newReporter({ beatId: item.id })"> {{ item.name }} </a>
-          <div ui-view> </div>
-      </li>
-    </ul>
+  <div class="row well">
+    <h4>Search</h4>
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <input ng-model="query.name" type="text" class="form-control" placeholder="Search by Beat Name">
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <h4 ng-show="beats.length && filtered.length">Current Beats:</h4>
+    <h4 ng-show="beats.length && !filtered.length">No matches found.</h4>
+      <ul>
+        <li ng-repeat="item in filtered = beats | filter:query">
+          <a ui-sref="newReporter({ beatId: item.id })"> {{ item.name }} </a>
+            <ul ng-show="item.reporters.length">
+              <li ng-repeat="reporter in item.reporters">
+                {{ reporter.name }} <br />
+                  <div ui-view> </div>
+              </li>
+            </ul>
+        </li>
+      </ul>
+    </div>
 </div>
 
 <div class="col-md-6">
