@@ -3,7 +3,7 @@ newspaperBeats.controller('ReportersCtrl', function ReportersCtrl($scope, $state
   $scope.addReporter = function() {
     $scope.beat.reporters.push({ name: $scope.reporterName,
                                   birthdate: $scope.birthdate,
-                                  yearsEmployed: $scope.yearsEmployed
+                                  yearsEmployed: $scope.yearsEmployed,
                                 });
 
     $scope.reporterName = null;

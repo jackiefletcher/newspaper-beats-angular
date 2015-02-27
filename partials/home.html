@@ -17,8 +17,10 @@
           <a ui-sref="newReporter({ beatId: item.id })"> {{ item.name }} </a>
             <ul ng-show="item.reporters.length">
               <li ng-repeat="reporter in item.reporters">
-                {{ reporter.name }} <br />
-                  <div ui-view> </div>
+                <a ng-click="details = true">{{ reporter.name }}</a>
+                  <span ng-show="details" ng-click="details = false"><p>Birthdate: {{ reporter.birthdate | date: "yyyy-MM-dd" }}
+                    | Years Employed: {{ reporter.yearsEmployed }} <span class="info">Click to hide</span></span>
+                  </p>
               </li>
             </ul>
         </li>
@@ -26,7 +28,9 @@
     </div>
 </div>
 
-<div class="col-md-6">
+<div ui-view> </div>
+
+<div class="row">
   <h4>Add a new beat:</h4>
   <form ng-submit="BeatsFactory.addBeat()" class="form-inline" role="form">
     <div class="form-group">
