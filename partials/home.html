@@ -4,7 +4,7 @@
   <h4>Current Beats:</h4>
     <ul>
       <li ng-repeat="item in beats">
-         {{ item.name }} 
+        <a ui-sref="newReporter({ beatId: item.id })"> {{ item.name }} </a>
           <div ui-view> </div>
       </li>
     </ul>

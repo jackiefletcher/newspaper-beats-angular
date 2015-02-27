@@ -6,5 +6,9 @@ newspaperBeats.config(function($stateProvider) {
     templateUrl: "partials/home.html",
     controller: 'BeatsCtrl'
   });
-  
+  $stateProvider.state('newReporter', {
+    url: "/newReporter/:beatId",
+    templateUrl: "partials/newReporter.html",
+    controller: 'ReportersCtrl'
+  });
 });

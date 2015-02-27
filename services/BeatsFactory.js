@@ -4,7 +4,8 @@ newspaperBeats.factory('BeatsFactory', function BeatsFactory() {
   factory.addBeat = function() {
     factory.beats.push({ name: factory.beatName,
                         id: factory.beats.length + 1,
-                        reporters: [] });
+                        reporters: []
+                        });
     factory.beatName = null;
   };
   return factory;
