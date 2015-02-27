@@ -1,3 +1,7 @@
+.container {
+  font-family: 'Slabo 27px', serif;
+}
+
 .info {
   font-size: .7em;
   font-style: italic;

@@ -1,4 +1,7 @@
-<h2>Pendleton Paper -- Beats</h2>
+<div class="row">
+  <h2>Pendleton Paper -- Beats</h2>
+  <hr>
+</div>
 
 <div ng-show="beats.length">
   <div class="row well">
@@ -18,7 +21,9 @@
             <ul ng-show="item.reporters.length">
               <li ng-repeat="reporter in item.reporters">
                 <a ng-click="details = true">{{ reporter.name }}</a>
-                  <span ng-show="details" ng-click="details = false"><p>Birthdate: {{ reporter.birthdate | date: "yyyy-MM-dd" }}
+                  <span ng-show="details" ng-click="details = false">
+                    <p>Birthdate: {{ reporter.birthdate | date: "MM-dd-yyyy" }}
+                    <!-- <p>Birthdate: {{ reporter.birthdate | date: "yyyy-MM-dd" }} -->
                     | Years Employed: {{ reporter.yearsEmployed }} <span class="info">Click to hide</span></span>
                   </p>
               </li>
